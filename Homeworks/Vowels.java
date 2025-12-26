@@ -1,24 +1,53 @@
 import java.util.Scanner;
-class vowels
+class Vowels
 {
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner (System.in);
-        System.out.println("Enter the letter : ");
-        char ch = sc.next().charAt(0);
-        if((ch=='a')||(ch=='e')||(ch=='i')||(ch=='o')||(ch=='u'))
-        {
-            System.out.println("The letter is a vowel");
-        
-        }
-        else if ((ch=='A')||(ch=='E')||(ch=='I')||(ch=='O')||(ch=='U'))
-        {
-            System.out.println("The letter is a vowel");
-        
-        }
-        else 
-        {
-            System.out.println("The letter is a consonent ");
-        }
-    }
+	public static void main (String [] args)
+	{
+		Scanner sc = new Scanner (System.in);
+		System.out.print("Enter the Letter : ");
+		char ch = sc.next().charAt(0);
+		
+		switch (ch)
+		{
+			case 'a' : 
+			System.out.println("Vowel");
+			break;
+			case 'e' : 
+			System.out.println("Vowel");
+			break;
+			case 'i' : 
+			System.out.println("Vowel");
+			break;
+			case 'o' : 
+			System.out.println("Vowel");
+			break;
+			case 'u' : 
+			System.out.println("Vowel");
+			break;
+			case 'A' : 
+			System.out.println("Vowel");
+			break;
+			case 'E' : 
+			System.out.println("Vowel");
+			break;
+			case 'I' : 
+			System.out.println("Vowel");
+			break;
+			case 'O' : 
+			System.out.println("Vowel");
+			break;
+			case 'U' : 
+			System.out.println("Vowel");
+			break;
+			default :
+			System.out.println("Consonent");
+			break;
+		}
+	}
 }
+			
+			
+			
+			
+		
+		
