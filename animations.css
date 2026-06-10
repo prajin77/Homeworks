@@ -1,0 +1,98 @@
+/* ===== PRAJIN V — PORTFOLIO ANIMATIONS ===== */
+
+/* Ping dot pulse (hero badge) */
+@keyframes ping {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+/* Cursor blink (typing box) */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Hero circle glow shift */
+@keyframes rotateRing {
+  0%   { box-shadow: 0 0 40px rgba(0,245,255,0.1), inset 0 0 40px rgba(0,245,255,0.05); }
+  50%  { box-shadow: 0 0 60px rgba(124,58,237,0.2), inset 0 0 60px rgba(124,58,237,0.05); }
+  100% { box-shadow: 0 0 40px rgba(0,245,255,0.1), inset 0 0 40px rgba(0,245,255,0.05); }
+}
+
+/* Orbit rings spin */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Scroll reveal */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Float effect for hero visual */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== ANIMATION CLASS ATTACHMENTS ===== */
+
+.animate-ping {
+  animation: ping 1.5s infinite;
+}
+
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Reveal class used by IntersectionObserver JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Glass card hover */
+.glass-card {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 245, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Skill tag hover */
+.skill-tag {
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+/* Project link arrow */
+.project-link {
+  transition: gap 0.2s ease;
+}
+
+/* Button transitions */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 35px rgba(0, 245, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 245, 255, 0.15);
+}

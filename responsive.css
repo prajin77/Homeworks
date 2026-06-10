@@ -1,0 +1,138 @@
+/* --- MOBILE & TABLET RESPONSIVENESS OVERRIDES --- */
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .skills-ecosystem-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Grid conversions to Single Column Layouts */
+  .hero-grid, 
+  .about-grid, 
+  .skills-ecosystem-layout, 
+  .dashboard-grid, 
+  .contact-grid,
+  .ai-suite-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-image-wrapper {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Vertical Timeline adjustments for mobile (shifts path and cards to left side) */
+  .timeline-glow-path {
+    left: 2rem;
+  }
+  
+  .timeline-node-card {
+    width: 100%;
+    align-self: flex-start !important;
+    padding-left: 4.5rem !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+  }
+  
+  .timeline-node-dot {
+    left: 1.5rem !important;
+  }
+  
+  .timeline-node-card.left .timeline-node-dot {
+    right: auto;
+  }
+  
+  .timeline-date {
+    position: relative;
+    top: 0;
+    left: 0 !important;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-links {
+    display: none; /* Can collapse on smaller viewports, showing sound/customizer actions */
+  }
+  
+  .customizer-panel {
+    width: 100vw;
+    right: -105vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .typing-box {
+    font-size: 1.2rem;
+  }
+  
+  section {
+    padding: 5rem 0 2rem 0;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .dashboard-grid {
+    gap: 2rem;
+  }
+  
+  .stats-counters-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    gap: 2.5rem;
+  }
+  
+  .recommender-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-hud-row {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .typing-box {
+    font-size: 1rem;
+  }
+  
+  .sound-toggle-btn span {
+    display: none; /* Hide sound icon label to save space */
+  }
+  
+  .sound-toggle-btn {
+    padding: 0.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
